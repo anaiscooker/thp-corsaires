@@ -1,0 +1,32 @@
+<h1>Tous les corsairs</h1>
+
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Age</th>
+      <th colspan="3">Show</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @corsairs.each do |corsair| %>
+      <tr>
+        <td><%= corsair.first_name%></td>
+        <td><%= corsair.age%> </td>
+        <td><button><%= link_to 'Show', corsair_path(corsair.id), class: "btn btn-primary"%></button></td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+</table>
+
+</div>
+</div>
+
+<div class="col-md-6 col-md-offset-3">
+	<button><%= link_to 'New', new_corsair_path, class: "btn btn-primary"%></button>
+</div>

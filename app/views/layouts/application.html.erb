@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-0.8.1.min.css"/>
     <title>ThpCorsaires</title>
     <%= csrf_meta_tags %>
 
@@ -9,6 +10,8 @@
   </head>
 
   <body>
+  <%= render "layouts/header" %>
+
     <%= yield %>
   </body>
 </html>

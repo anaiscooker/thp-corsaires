@@ -1,0 +1,13 @@
+<h1>Profil</h1>
+
+<h1>
+  <strong>Nom:</strong>
+  <%= @corsair.first_name %>
+</h1>
+
+<p>
+  <strong>Age:</strong>
+  <%= @corsair.age %>
+</p>
+
+<%= link_to 'Edit', edit_corsair_path(@corsair), class: "btn btn-primary"%> 

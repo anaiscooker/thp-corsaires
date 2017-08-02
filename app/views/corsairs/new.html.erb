@@ -12,6 +12,9 @@
       <%= f.label :age %>
       <%= f.text_field :age, class: 'form-control' %>
 
+    <p><%= f.radio_button(:likeness, "Kebab") %>T'es plutôt Kebab?</p>
+  	<p><%= f.radio_button(:likeness, "Hummus") %>ou bien Hummus?</p>
+
       <%= f.submit "créer le profil", class: "btn btn-primary" %>
     <% end %>
   </div>

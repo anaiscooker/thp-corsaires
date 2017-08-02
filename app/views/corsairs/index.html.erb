@@ -16,7 +16,8 @@
     <% @corsairs.each do |corsair| %>
       <tr>
         <td><%= corsair.first_name%></td>
-        <td><%= corsair.age%> </td>
+        <td><%= corsair.age%></td>
+        <td><%= corsair.likeness%></td>
         <td><button><%= link_to 'Show', corsair_path(corsair.id), class: "btn btn-primary"%></button></td>
       </tr>
     <% end %>

@@ -1,7 +1,7 @@
 <h1>Corsairs#edit</h1>
 <h1>Edit Corsair</h1>
  
-<%= form_for(@corsair) do |f| %>
+<%= form_for @corsair do |f| %>
  
   <p>
     <%= f.label :first_name %><br>
@@ -10,9 +10,9 @@
  
   <p>
     <%= f.label :age %><br>
-    <%= f.text_area :age %>
+    <%= f.text_field :age %>
   </p>
- 
+
   <p>
     <%= f.submit "Sauvegarder les changements", class: "btn btn-primary"%>
     <%= f.submit "Supprimer", class: "btn btn-primary"%>

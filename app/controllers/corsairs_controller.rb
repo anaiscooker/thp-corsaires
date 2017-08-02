@@ -14,16 +14,13 @@ class CorsairsController < ApplicationController
   end
 
   def update
+    @corsair = Corsair.find(params[:id])
+    @corsair.update(user_params)
+    redirect_to corsair_path(@corsair.id)
   end
 
   def edit 
     @corsair = Corsair.find(params[:id])
-    if @corsair.save
-        flash[:success] = "saved changes"
-        redirect_to edit_corsair_path
-      else
-        puts "oups"
-      end
   end
 
   def destroy
@@ -41,6 +38,6 @@ class CorsairsController < ApplicationController
   private
 
     def user_params
-      params.require(:corsair).permit(:first_name, :age)
+      params.require(:corsair).permit(:first_name, :age, :likeness, :bio, :slack_handle, :github)
     end
 end
